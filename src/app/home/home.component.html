@@ -1,0 +1,20 @@
+
+<div fxLayout="column wrap" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutAlign="left" style="margin-top: 40px; margin-left: 20px;" fxFlex="50%">
+    <div fxLayout="column wrap" fxLayout.xs="column" fxLayoutGap="20px" >
+        <h1>Resumo da Implementação</h1>
+        <mat-label><strong>Ambiente de Desenvolvimento: </strong>Foi utilizada a última verção da framework Angular CLI(8.0.3), NodeJS(12.4.0), Node(11.13.0). Para a programação foi utilizada o editor de código-fonte Visual Studio Code.</mat-label>
+        <mat-label><strong>Componentes: </strong>Para o design dos componentes de tela, foi feio o import do Angular Matirial e Flex-Layout (Responsividade)</mat-label>
+        <mat-label><strong>Navegação: </strong>O botão <mat-icon>home</mat-icon> direciona o usuário para a tela de "Resumo de Implementação" e o botão <mat-icon>movie</mat-icon> direciona o usuário para a tela de "Listagem de Filmes"</mat-label>
+        <ul>
+          <li>
+              <mat-label><strong>Tela de Listagem de Filmes: </strong>Foi utilizado o component PostComponent, responsável por fazer a comunicação com a API TMDB tratar o seu JSON e retornar seus dados para a tela html. Para mostrar cada filme foi utilizado o component MatCard com uma ação clicável, ou seja, ao clicar em um card de algum filme, o usuário será redirecionado para a Tela do Detalhamento de Filme. Também Foi utilizado o Flex-Layout que permite a responsividade dos componentes para cada arranjo de tela.</mat-label>
+          </li>
+          <br>
+          <li>
+              <mat-label><strong>Tela de Detalhamento do Filme: </strong>Essa tela é responsável por consultar, via API, se existem um ceto filme e trazer todas susas informações caso o encontre. Essa consulta na API é feita através de uma função de findById, fornecida pela própria API. Quando o usuário clica no filme na Tela de Listagem de FIlmes, o id do filme clicado é transmitido ate a Tela de Detalhamento do Filme através das rotas e o arquivo details.component.ts faz a requisição para API de acodo com o id fornecido pela rota.</mat-label>
+
+          </li>
+        </ul>
+
+    </div>
+  </div>

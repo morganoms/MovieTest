@@ -1,0 +1,9 @@
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutAlign="center" style="margin-top: 50px; margin-bottom:10px">
+  <mat-card class="card-picture" *ngFor="let m of items | filter : searchText" style="margin-bottom:10px !important; cursor: pointer;" routerLink="{{m[2]}}">
+      <img mat-card-image src="{{m[7]}}">
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+        <span fxFlex="80%" fxLayoutAlign="left">{{m[5]}}</span>
+      </mat-card-title>
+  </mat-card>
+</div>
+

@@ -1,0 +1,32 @@
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="30px" fxLayoutAlign="center" style="margin-top: 50px; margin-left:10px">
+  <img src="{{movie[12]}}" style="box-shadow: 10px 10px 20px #aaaaaa;">
+  <mat-card class="card-picture" style="box-shadow: 0px 0px 20px #aaaaaa;" fxFlex="50%">
+      <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column" style="margin-top: -20px">
+          <span fxFlex="90%"><h3>Ficha Técnica ({{movie[9]}})</h3></span>
+          <span class="fill-space"></span>
+          <div  fxLayoutAlign="right">
+              <span><h3>{{movie[23]}}</h3></span>
+              <mat-icon style="margin-top: 30px;">star</mat-icon>
+          </div>
+      </mat-card-title>
+      <mat-card-subtitle fxLayout.gt-xs="row" fxLayout.xs="column" style="margin-top: -20px">
+          <span fxFlex="90%">{{genero}}</span>
+      </mat-card-subtitle>
+      <hr>
+      <div fxLayout="column wrap" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutAlign="left" style="margin-top: 40px">
+        <mat-label><strong>Título Original: </strong>{{movie[9]}}</mat-label>
+        <mat-label><strong>Data de Lançamento: </strong>{{movie[15] | date:'dd/MM/yyyy'}}</mat-label>
+        <mat-label><strong>Duração: </strong>{{movie[17]}} min</mat-label>
+        <mat-label *ngIf="movie[0]"><strong>Classificação Adulta: </strong>Sim</mat-label>
+        <mat-label *ngIf="!movie[0]"><strong>Classificação Adulta: </strong>Não</mat-label>
+        <mat-label *ngIf="movie[19]=='Released'"><strong>Status: </strong>Lançado</mat-label>
+        <mat-label *ngIf="movie[8]=='en'"><strong>Linguagem Original: </strong>Inglês</mat-label>
+        <mat-label><strong>Companhias de Produção: </strong>{{companhias}}</mat-label>
+        <mat-label><strong>Países de Produção: </strong>{{paises}}</mat-label>
+        <mat-label><strong>Principal Fala: </strong>{{movie[20]}}</mat-label>
+        <mat-label><strong>Descrição do Filme: </strong>{{movie[10]}}</mat-label>
+        <mat-label><strong>Site do Filme: </strong> <a href="{{movie[5]}}">Clique Aqui</a></mat-label>
+      </div>
+     
+  </mat-card>
+</div>
